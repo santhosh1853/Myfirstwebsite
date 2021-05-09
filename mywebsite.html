@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyWebsite</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+    .navbar{
+        background-color: darkorange;
+    }
+    .carousel-indicators li{
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+    }
+    .gap100{
+        padding: 50px 0px;
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+       <a class="navbar-brand" href="">Brand
+
+       </a>
+        <button class="navbar-toggler ml-auto" type="button" data-target="#abc" data-toggle="collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id=abc>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+         <a class="nav-link text-dark" href="Home.html" target="_self">home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="About.html" target="_self">about</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="Services.html" target="_self">services</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link text-dark" href="Contact.html">contact</a>
+        </li>
+    </ul>
+    <button data-target="#a" data-toggle="modal" class="btn btn-primary">SignUp</button>
+</div>
+</nav>
+<div class="modal" id="a">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                login page
+                <button class=close data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form novalidate >
+                    <div class="form-group">
+            <input type="text" class="form-control" placeholder="username" required>
+            <small class="invalid-feedback">please enter the valid username</small>
+            </div>
+            <div class="form-group">
+            <input type="email" class="form-control" placeholder="email" required>
+            <small class="invalid-feedback">please enter the valid email</small>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" required="" invalid>
+                <small class="invalid-feedback">please enter the valid password</small>
+                </div>
+            <div class="form-group">
+            <input type="date" class="form-control" placeholder="date" required>
+            <small class="invalid-feedback">please enter the valid date of birth</small>
+            </div>
+            <div class="form-group form-check">
+                <label class="label-control"for="m">Gender</label>
+                <div class="form-check">
+            <input type="radio" class="form-check-control" name="m" id="">
+            <label class="form-check-label" for="">Male</label>
+            </div>
+            <div class="form-check">
+            <input type="radio" class="form-check-control"name="m" id="">
+            <label class="form-check-label" for="">Female</label>
+            </div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="checkbox1">
+                    <label class="form-check-label" for="checkbox1">RememberMe</label>
+                </div>
+            
+            <div class="form-group">
+            <input type="submit" value="login" class="btn btn-primary">
+            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    var v=document.querySelector('form');
+    v.addEventListener('submit',function(e){
+        if(v.checkValidity()===false){
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        v.classList.add('was-validated');
+    })
+    </script>
+    <div id="a01" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#a01" data-slide-to="0"></li>
+            <li data-target="#a01" data-slide-to="1"></li>
+            <li data-target="#a01" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100"src="san1.png" alt="" height="400" width="250">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="san21.jpg" alt="" height="400" width="250">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="san3.jpg" alt="" height="400" width="250">
+            </div>
+        </div>
+<a class="carousel-control-prev" href="#a01" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span></a>
+    <a class="carousel-control-next" href="#a01" data-slide="next">
+        <span class="carousel-control-next-icon"></span></a>
+    
+    </div>
+    
+    <section>
+        <div class="container">
+            <div class="row gap100">
+                <div class="col-md-6">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dignissimos fugit explicabo! Maiores magnam veniam ipsam eaque, et mollitia exercitationem earum rerum odio aliquam voluptatem ratione adipisci! Blanditiis, eos deserunt? Totam officiis hic natus atque possimus qui consequatur distinctio, quia, nobis, saepe iure odit molestiae cum expedita eligendi dolorum culpa obcaecati! Doloribus est fugiat molestiae quia deserunt magni voluptate dicta?
+                </div>
+                <div class="col-md-6">
+                    <img src="san5.jfif" class="img-fluid"alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
